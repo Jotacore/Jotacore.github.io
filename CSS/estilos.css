@@ -1,0 +1,514 @@
+ /* Carlos Viegas Girón 31/01/2018 */
+ /* Estilos generales */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color: #3f3f3f;
+ }
+
+ a {
+     text-decoration: none;
+     color: rgb(255, 55, 0)
+ }
+
+ a:hover {
+     color: rgb(175, 54, 21);
+ }
+
+ a.activo {
+     color: #DF4215;
+ }
+
+img {
+    max-width: 100%;
+}
+
+p {
+    padding: 10px;
+    line-height: 1.5em;
+}
+
+.boton {
+    margin: 40px;
+    color: white;
+    background-color: #DF4215;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.boton:hover{
+    color: white;
+} 
+
+.naranja { background-color:#DF4215; }
+.azul { background-color:#0D71B9; }
+.amarillo { background-color: #E8A50A; }
+
+.naranja:hover { background-color:rgb(161, 47, 15); }
+.azul:hover { background-color:rgb(9, 74, 121); }
+.amarillo:hover { background-color: rgb(209, 153, 23); }
+
+.separador {
+      display: none;
+      border: 1px solid rgba(42, 122, 66, 0.322);
+      width: 60%;
+}
+
+ @keyframes intermitente {
+     0%{opacity: 0;}
+     50% {opacity: 1;}
+     100% {opacity: 0;}
+ }
+
+ /* Cabecera con logo y barra de navegación */
+
+ header {
+     position: absolute;
+     top: 0;
+     display: flex;
+     justify-content: space-between;
+     width: 100%;
+     height: 100px;
+     align-items: center;
+     padding: 20px;
+ }
+.normal {
+    box-shadow: 0 4px 8px grey;
+    position: initial;
+}
+
+.normal:hover {
+    color: #DF4215}
+
+ header .burger{
+     display: none;
+     color: rgb(228, 227, 227);
+     text-shadow: 1px 1px 20px #3f3f3f;
+     font-size: 36px;
+     background-color: rgba(223, 108, 77, 0.397);
+     border-radius: 5px;
+     padding: 1px 11px;
+     /* border: 1px solid rgba(202, 74, 0, 0.246); */
+ }
+
+ .normal .burger {
+    color: rgb(204, 226, 255);
+    background-color: #ffffff00;
+}
+
+ header nav ul {
+     list-style: none;
+     display: flex;
+ }
+
+ header nav ul li {
+     padding: 10px;
+ }
+
+ header nav ul li a {
+     color: #DF4215;
+     text-shadow: 2px 2px 5px #ffffff;
+     background-color: rgba(223, 65, 21, 0.185);
+     border-radius: 5px;
+ }
+
+ .normal nav ul li a {
+    color: #3f3f3f;
+    background-color: rgba(255, 255, 255, 0);  
+}
+
+.normal nav ul li a:hover {
+    color: rgb(175, 54, 21);
+}
+
+ /* 24 */ 
+.normal nav ul li a.activo {
+    color: #3f3f3f;
+}
+
+ /* Sección Hero */
+
+ .hero {
+     height: 100vh;
+     /* background-image: url('../img/keyboard.jpg'); */
+     background-image: url('../img/business.jpg');
+     background-position: center;
+     background-size: cover;
+     background-attachment: fixed;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+     align-items: center;
+ }
+
+ .hero h1 {
+     color: rgb(228, 227, 227);
+     font-size: 50px;
+     text-shadow: 1px 1px 1px #3f3f3f;
+     background-color: rgba(223, 65, 21, 0.397);
+     border-radius: 12px;
+ }
+
+ .hero h2 {
+     color: rgb(204, 204, 204);
+     margin-bottom: 80px;
+     text-shadow: 1px 1px 5px #3f3f3f;
+     background-color: rgba(223, 65, 21, 0.397);
+     border-radius: 12px;
+ }
+
+ .hero a {
+     color: white;
+     font-size: 40px;
+     margin-bottom: 40px;
+     animation-name: intermitente;
+     animation-duration: 1500ms;
+     animation-iteration-count: infinite;
+ }
+
+ /* Layout */
+ .fila {
+     padding: 40px;
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+ .ultima {
+    margin-bottom: 40px;
+} /* Separa el footer del newsletter*/
+
+ .col1 {
+     padding: 10px;
+     flex-basis: 300px;
+     flex-grow: 1;
+ }
+
+ .col2 {
+    padding: 10px;
+    flex-basis: 300px;
+    flex-grow: 2;
+}
+
+.col3 {
+    padding: 10px;
+    flex-basis: 300px;
+    flex-grow: 3;
+}
+
+.col100 {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+.centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piederecho {
+    display: flex;
+    align-items: flex-end;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sección con imagen de fondo */
+
+.fondo {
+    padding: 60px 40px;
+    background-image: url('../img/computer-1185637_1920.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.eslogan {
+    font-size: 40px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+}
+
+/* Formulario newsletter */
+
+.input_newsletter {
+    color: #DF4215;
+    font-size: 20px;
+    padding: 15px;
+    border: 4px solid #DF4215;
+    border-radius: 5px;
+    margin: 10px 20px;
+}
+
+.boton_newsletter {
+    background-color: #DF4215;
+    background: -webkit-linear-gradient(top, #DF4215, rgb(179, 48, 12));
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    border: 4px solid #DF4215;
+    border: none; /*Para gradiente*/
+    margin: 10px 20px;
+    border-radius: 5px;
+}
+
+.boton_newsletter:hover {
+    background: -webkit-linear-gradient(top, rgb(197, 57, 19), rgb(151, 41, 10));
+    /* border: 4px solid rgb(161, 47, 15); */
+    cursor: pointer;
+}
+
+.boton_newsletter:focus, .input_newsletter:focus {
+    outline: none;
+}
+
+.newsletter {
+    font-size: 32px;
+    color: #DF4215;
+}
+
+/* Footer */
+
+footer {
+    background-color:black;
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+    position: relative;
+}
+
+.top {
+    font-size: 50px;
+    position: absolute; /* Para que el absolute funcione el padre tiene que estar posicionado (relative)*/
+    top: -40px;
+    right: 50%;
+    transform: translateX(50%);
+    height: 60px;
+    width: 60px;
+    border-radius: 35px;
+    background-color: black;
+    display: flex; /* Para que la flecha se centre dentro del círculo*/
+    justify-content: center; /* Para que la flecha se centre dentro del círculo*/
+    align-items: center; /* Para que la flecha se centre dentro del círculo*/
+    padding: 10px;
+}
+
+.izda {
+    padding: 20px;
+    /* border: 1px solid white; */
+}
+
+.izda p {
+    padding: 5px;
+}
+.centro {
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+}
+
+.dcha {
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: flex-end; */
+    align-items: center;
+    padding: 20px;
+}
+
+.dcha a {
+    font-size: 50px;
+    color: white;
+    margin: 10px;
+}
+
+.dcha a:hover {
+    color: #DF4215;
+}
+
+.legales a {
+    font-size: 14px;
+}
+
+.minifooter p {
+    font-size:14px;
+    padding: 5px; 
+}
+
+/* Contacto */
+
+.direccion {
+    line-height: 1.8em;
+    border: 1px solid rgba(42, 122, 66, 0.198);
+    text-align: center;
+    background-color: rgba(13, 117, 44, 0.089);
+    border-radius: 12px;
+}
+
+h1 {
+    font-size: 34px;
+}
+h2 {
+    font-size: 26px;
+    padding: 10px;
+}
+ul {
+    padding-left: 60px;
+}
+li {
+    padding: 10px;
+    line-height: 1.4em;
+}
+
+/* Media Queries */ /*(Cambios para pantalla pequeña)*/ /*Los queries siempre por orden de tamaño*/
+
+@media (max-width: 920px) { 
+    .izda, .centro, .dcha {
+        flex-basis: 100%;
+    }
+    .col1 {
+        flex-basis: initial;
+    }
+    .columna img {
+        margin-top: 40px;
+        height: 160px;
+    }
+
+    .columna, .boton {
+        margin: 40px;
+        font-size: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .newsletter {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .input_newsletter {
+        font-size: 18px;
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+    .boton_newsletter {
+        font-size: 18px;
+        padding: 12px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 740px) {
+    nav {
+        display: none;
+    } /* Cuando el ancho de la ventana es menor a 740px el header desaparece*/
+    
+    header .burger {
+        display: initial;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .col1 {
+        flex-basis: initial;
+    }
+    .columna img {
+        margin-top: 40px;
+        height: 160px;
+    }
+
+    .columna, .boton {
+        margin: 40px;
+        font-size: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .newsletter {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .input_newsletter {
+        font-size: 18px;
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+    .boton_newsletter {
+        font-size: 18px;
+        padding: 12px;
+        border-radius: 10px;
+    }
+}
+@media (max-width: 700px) {
+    .fila {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col100 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } /* Newsletters en columnas*/
+    .separador {
+        display: initial;
+    }
+
+    .eslogan {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 420px) {
+    body {
+        font-size: 18px;  
+    }
+    
+    .fila {
+        padding: 20px 10px;
+    }
+}
